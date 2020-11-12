@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900');
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+
+// Set your brand colors
+// $purple: #8a4d76;
+// $pink: #fa7c91;
+// $brown: #757763;
+// $beige-light: #d0d1cd;
+// $beige-lighter: #eff0eb;
+
+// Update Bulma's global variables
+$family-primary: 'Roboto', sans-serif;
+$family-secondary: 'Raleway', sans-serif;
+// $grey-dark: $brown;
+// $grey-light: $beige-light;
+// $primary: $purple;
+// $link: $pink;
+$widescreen-enabled: true;
+// $fullhd-enabled: false;
+
+// Update some of Bulma's component variables
+// $body-background-color: $beige-lighter;
+// $control-border-width: 2px;
+// $input-border-color: transparent;
+// $input-shadow: none;
+
+// Import only what you need from Bulma
+@import '../node_modules/bulma/bulma.sass';
+@import '../node_modules/bulma-helpers/css/bulma-helpers.min.css'
+
+h1, h2, h3, h4, h5 
+  font-family: $family-secondary
+
+hr
+  height: 1px
