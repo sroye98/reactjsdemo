@@ -3,6 +3,7 @@ import {
 } from 'react-router-dom';
 
 import AboutUsIndex from '../Pages/AboutUs/Index';
+import AnonymousFooter from '../Components/AnonymousFooter';
 import AnonymousHeader from '../Components/AnonymousHeader';
 import CareersIndex from '../Pages/Careers/Index';
 import ClientFaqs from '../Pages/Services/ClientFAQs';
@@ -33,6 +34,7 @@ function AnonymousLayout(props) {
       <Route path="/who-we-are/social-media" component={SocialMedia} />
       <Route exact={true} path="/who-we-are" component={AboutUsIndex} />
       <Route exact={true} path="/" component={Index} />
+      <AnonymousFooter />
     </div>
   );
 }

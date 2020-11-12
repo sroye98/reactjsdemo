@@ -1,10 +1,15 @@
+import { HelmetProvider } from 'react-helmet-async';
 import BlankLayout from './Layouts/BlankLayout';
 
 function App() {
+  const helmetContext = {};
+  
   return (
-    <div>
-      <BlankLayout />
-    </div>
+    <HelmetProvider context={helmetContext}>
+      <div>
+        <BlankLayout />
+      </div>
+    </HelmetProvider>
   );
 }
 
