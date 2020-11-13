@@ -6,7 +6,7 @@ function IndustriesIndex() {
       <Helmet>
         <title>Industries We Serve | Creative Team</title>
         <meta name="description" content="Industries We Serve | Creative Team" />
-        <link rel="canonical" href={`${process.env.PUBLIC_URL}/services`} />
+        <link rel="canonical" href={`${process.env.PUBLIC_URL}/industries-we-serve`} />
       </Helmet>
       <section className="hero is-fullheight" style={{borderTop: '1px solid hsl(0, 0%, 86%)'}}>
         <div className="hero-body">
