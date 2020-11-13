@@ -12,7 +12,7 @@ import BlogLayout from './BlogLayout';
 
 function BlankLayout() {
   return (
-    <Router basename=".">
+    <Router basename={process.env.PUBLIC_URL}>
       <Switch>
         <Route path="/admin" component={AdminLayout} />
         <Route path="/blog" component={BlogLayout} />
