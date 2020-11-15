@@ -5,13 +5,13 @@ function BlogTile(props) {
     <article className="notification has-background-white">
       <p className="title is-size-4">{parse(props.post.title)}</p>
       <p className="subtitle is-size-7">
-        <span class="icon">
-          <i class="fas fa-user"></i>
+        <span className="icon">
+          <i className="fas fa-user"></i>
         </span>
         {parse(props.post.author)}
         &nbsp;&nbsp;&nbsp;
-        <span class="icon">
-          <i class="fas fa-calendar"></i>
+        <span className="icon">
+          <i className="fas fa-calendar"></i>
         </span>
         {props.post.publishedDate}
       </p>
