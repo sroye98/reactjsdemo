@@ -26,3 +26,12 @@ export const ConsultantFAQS = [
   { question: '<p>Sixth Question</p>', answer: '<p>Sixth Answer</p>' },
   { question: '<p>Seventh Question</p>', answer: '<p>Seventh Answer</p>' }
 ];
+
+export const BlogPosts = [
+  { title: 'Post #6', slug: 'post-6', content: '<p>Post 6</p>', mediaUrl: '', mediaType: 'video', publishedDate: '11/14/2020', author: 'Saachi Roye' },
+  { title: 'Post #5', slug: 'post-5', content: '<p>Post 5</p>', mediaUrl: '', mediaType: 'video', publishedDate: '11/13/2020', author: 'Saachi Roye' },
+  { title: 'Post #4', slug: 'post-4', content: '<p>Post 4</p>', mediaUrl: '', mediaType: 'video', publishedDate: '11/12/2020', author: 'Saachi Roye' },
+  { title: 'Post #3', slug: 'post-3', content: '<p>Post 3</p>', mediaUrl: '', mediaType: 'video', publishedDate: '11/11/2020', author: 'Saachi Roye' },
+  { title: 'Post #2', slug: 'post-2', content: '<p>Post 2</p>', mediaUrl: '', mediaType: 'video', publishedDate: '11/10/2020', author: 'Saachi Roye' },
+  { title: 'Post #1', slug: 'post-1', content: '<p>Post 1</p>', mediaUrl: '', mediaType: 'video', publishedDate: '11/09/2020', author: 'Saachi Roye' }
+]
