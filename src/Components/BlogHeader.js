@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, NavLink, useHistory } from 'react-router-dom';
 import logo from '../Assets/Images/logo3.png';
 
@@ -6,8 +6,10 @@ function BlogHeader(props) {
   const history = useHistory();
   const [menuIsActive, setMenuIsActive] = useState(false);
 
-  history.listen(() => {
-    setMenuIsActive(false);
+  useEffect(() => {
+    history.listen(() => {
+      setMenuIsActive(false);
+    });
   });
 
   return (

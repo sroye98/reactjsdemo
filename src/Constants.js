@@ -34,4 +34,8 @@ export const BlogPosts = [
   { title: 'Post #3', slug: 'post-3', content: '<p>Post 3</p>', mediaUrl: '', mediaType: 'video', publishedDate: '11/11/2020', author: 'Saachi Roye' },
   { title: 'Post #2', slug: 'post-2', content: '<p>Post 2</p>', mediaUrl: '', mediaType: 'video', publishedDate: '11/10/2020', author: 'Saachi Roye' },
   { title: 'Post #1', slug: 'post-1', content: '<p>Post 1</p>', mediaUrl: '', mediaType: 'video', publishedDate: '11/09/2020', author: 'Saachi Roye' }
-]
+];
+
+export const JobListings = [
+  { id: '', title: '', slug: '', description: '', location: '', type: '', client: '', position: '', duration: '', created: '', status: '', skills: [], responsibilities: [] }
+];
