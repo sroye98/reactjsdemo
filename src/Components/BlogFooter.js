@@ -9,7 +9,7 @@ function BlogFooter() {
       </div>
       <hr className="has-background-grey-dark" />
       <div className="container">
-        <div className="columns">
+        <div className="columns is-mobile">
           <div className="column is-one-fourth has-text-left">
             <p className="is-size-7 is-uppercase has-text-white mb-3">Links</p>
             <p className="is-size-7 mb-1">
@@ -36,15 +36,15 @@ function BlogFooter() {
           </div>
           <div className="column is-one-fourth">
             <p className="is-size-7 is-uppercase has-text-white mb-3">Houston Office</p>
-            <p className="is-size-7 has-text-grey-light mb-1">
-              <address>
+            <address>
+              <p className="is-size-7 has-text-grey-light mb-1">
                 2825 Wilcrest Dr.<br />
                 Suite 456<br />
                 Houston, TX 77042
-              </address>
-            </p>
+              </p>
+            </address>
           </div>
-          <div className="column is-one-fourth"></div>
+          <div className="column is-one-fourth is-hidden-mobile"></div>
           <div className="column is-one-fourth has-text-right">
             <p className="is-size-7 is-uppercase has-text-white mb-3">Connect</p>
             <p className="is-size-7 mb-1">

@@ -8,7 +8,7 @@ function BlogIndex(props) {
 
   const renderedPosts = remainingPosts.map((item, index) => {
     return (
-      <div className="column is-6" key={index}>
+      <div className="column is-half" key={index}>
         <BlogSmallTile post={item} />
       </div>
     );
@@ -17,7 +17,7 @@ function BlogIndex(props) {
   return (
     <div className="container">
       <div className="columns">
-        <div className="column is-2"></div>
+        <div className="column is-full"></div>
         <div className="column">
           <BlogTile post={primaryPost} />
           <hr className="has-background-grey-lighter" />

@@ -6,6 +6,7 @@ import {
 
 import Login from '../Pages/Auth/Login';
 import SignUp from '../Pages/Auth/SignUp';
+import ScrollToTop from '../ScrollToTop';
 import AdminLayout from './AdminLayout';
 import AnonymousLayout from './AnonymousLayout';
 import BlogLayout from './BlogLayout';
@@ -13,6 +14,7 @@ import BlogLayout from './BlogLayout';
 function BlankLayout() {
   return (
     <Router basename={process.env.PUBLIC_URL}>
+      <ScrollToTop />
       <Switch>
         <Route path="/admin" component={AdminLayout} />
         <Route path="/blog" component={BlogLayout} />
