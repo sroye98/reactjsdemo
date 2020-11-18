@@ -51,25 +51,9 @@ function AnonymousHeader(props) {
             <NavLink activeClassName="is-active" to="/industries-we-serve" className="navbar-item is-size-7">
               Industries We Serve
             </NavLink>
-            <div className="navbar-item has-dropdown is-hoverable">
-              <NavLink activeClassName="is-active" exact={true} to="/who-we-are" className="navbar-link is-size-7">
-                Who We Are
-              </NavLink>
-              <div className="navbar-dropdown">
-                <NavLink activeClassName="is-active" exact={true} to="/who-we-are" className="navbar-item is-size-7">
-                  Introduction
-                </NavLink>
-                <NavLink activeClassName="is-active" to="/who-we-are/our-team" className="navbar-item is-size-7">
-                  Our Team
-                </NavLink>
-                <NavLink activeClassName="is-active" to="/who-we-are/social-media" className="navbar-item is-size-7">
-                  Social Media
-                </NavLink>
-                <NavLink activeClassName="is-active" to="/who-we-are/contact-us" className="navbar-item is-size-7">
-                  Contact Us
-                </NavLink>
-              </div>
-            </div>
+            <NavLink activeClassName="is-active" to="/who-we-are" className="navbar-item is-size-7">
+              Who We Are
+            </NavLink>
             <NavLink activeClassName="is-active" to="/careers" className="navbar-item is-size-7">
               Careers
             </NavLink>

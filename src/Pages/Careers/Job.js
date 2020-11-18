@@ -1,24 +1,67 @@
+import { Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import parse from 'html-react-parser';
+
+import { JobListings } from '../../Constants';
+
+function JobListingSkills(props) {
+  return props.skills.map((item, index) => {
+    return (
+      <span className="tag is-success is-rounded" key={index}>{parse(item)}</span>
+    );
+  });
+}
+
+function JobListingResponsibilities(props) {
+  return props.responsibilities.map((item, index) => {
+    return (
+      <li className="is-size-7 has-text-weight-light" key={index}>{parse(item)}</li>
+    );
+  })
+}
 
 function Job(props) {
-  const slug = props.slug;
+  const params = useParams();
+  const listing = JobListings.find(m => m.slug === params.slug);
 
   return (
     <div className="industriesPage">
       <Helmet>
-        <title>{slug} | Careers | Creative Team</title>
-        <meta name="description" content="Careers | Creative Team" />
-        <link rel="canonical" href={`${process.env.PUBLIC_URL}/careers/${slug}`} />
+        <title>{listing.title} | Careers | Creative Team</title>
+        <meta name="description" content={`${listing.title} | Careers | Creative Team`} />
+        <link rel="canonical" href={`${process.env.PUBLIC_URL}/careers/${listing.slug}`} />
       </Helmet>
-      <section className="hero is-fullheight" style={{borderTop: '1px solid hsl(0, 0%, 86%)'}}>
+      <section className="hero is-medium" style={{borderTop: '1px solid hsl(0, 0%, 86%)'}}>
         <div className="hero-body">
           <div className="container">
             <h1 className="title is-size-1 has-text-centered pb-6">
-              Careers
+              {parse(listing.title)}
             </h1>
-            <h2 className="subtitle has-text-centered has-text-grey-light">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mattis viverra nisl, a hendrerit nunc ultricies vel.
-            </h2>
+          </div>
+        </div>
+      </section>
+      <section className="section">
+        <div className="container">
+          <div className="content">
+            <div className="block">
+              {parse(listing.description)}
+            </div>
+            <div className="block">
+              <p className="is-uppercase has-text-weight-bold">Skills</p>
+              <div className="tags are-small">
+                <JobListingSkills skills={listing.skills} />
+              </div>
+            </div>
+            <div className="block">
+              <p className="is-uppercase has-text-weight-bold">Responsibilites</p>
+              <ul>
+                <JobListingResponsibilities responsibilities={listing.responsibilities} />
+              </ul>
+            </div>
+            <div className="block">
+              <Link to="/careers" className="button is-rounded is-primary">Back to Careers</Link>
+            </div>
           </div>
         </div>
       </section>

@@ -1,6 +1,15 @@
 import { Helmet } from 'react-helmet-async';
 
+import { JobListings } from '../../Constants';
+import CareerListing from '../../Components/CareerListing';
+
 function CareersIndex() {
+  const renderedCareerListings = JobListings.map((item, index) => {
+    return (
+      <CareerListing job={item} key={index} />
+    );
+  });
+
   return (
     <div className="industriesPage">
       <Helmet>
@@ -8,7 +17,7 @@ function CareersIndex() {
         <meta name="description" content="Careers | Creative Team" />
         <link rel="canonical" href={`${process.env.PUBLIC_URL}/careers`} />
       </Helmet>
-      <section className="hero is-fullheight" style={{borderTop: '1px solid hsl(0, 0%, 86%)'}}>
+      <section className="hero is-medium" style={{borderTop: '1px solid hsl(0, 0%, 86%)'}}>
         <div className="hero-body">
           <div className="container">
             <h1 className="title is-size-1 has-text-centered pb-6">
@@ -19,6 +28,9 @@ function CareersIndex() {
             </h2>
           </div>
         </div>
+      </section>
+      <section className="section">
+        {renderedCareerListings}
       </section>
     </div>
   );

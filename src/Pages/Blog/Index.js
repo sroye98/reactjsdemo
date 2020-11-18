@@ -1,3 +1,5 @@
+import { Helmet } from 'react-helmet-async';
+
 import BlogTile from '../../Components/BlogTile';
 import BlogSmallTile from '../../Components/BlogSmallTile';
 import { BlogPosts } from '../../Constants';
@@ -16,9 +18,13 @@ function BlogIndex(props) {
 
   return (
     <div className="container">
+      <Helmet>
+        <title>Blog | Creative Team</title>
+        <meta name="description" content="Blog | Creative Team" />
+        <link rel="canonical" href={`${process.env.PUBLIC_URL}/blog`} />
+      </Helmet>
       <div className="columns">
-        <div className="column is-full"></div>
-        <div className="column">
+        <div className="column is-full">
           <BlogTile post={primaryPost} />
           <hr className="has-background-grey-lighter" />
           <div className="pb-6">

@@ -12,7 +12,7 @@ function BlogSmallTile(props) {
             {parse(props.post.author)}
           </small>
         </h4>
-        {parse(props.post.content)}
+        {parse(props.post.snippet)}
         <div className="block">
           <Link to={`/blog/${props.post.slug}`}>Read More</Link>
         </div>

@@ -28,14 +28,127 @@ export const ConsultantFAQS = [
 ];
 
 export const BlogPosts = [
-  { title: 'Post #6', slug: 'post-6', content: '<p>Post 6</p>', mediaUrl: '', mediaType: 'video', publishedDate: '11/14/2020', author: 'Saachi Roye' },
-  { title: 'Post #5', slug: 'post-5', content: '<p>Post 5</p>', mediaUrl: '', mediaType: 'video', publishedDate: '11/13/2020', author: 'Saachi Roye' },
-  { title: 'Post #4', slug: 'post-4', content: '<p>Post 4</p>', mediaUrl: '', mediaType: 'video', publishedDate: '11/12/2020', author: 'Saachi Roye' },
-  { title: 'Post #3', slug: 'post-3', content: '<p>Post 3</p>', mediaUrl: '', mediaType: 'video', publishedDate: '11/11/2020', author: 'Saachi Roye' },
-  { title: 'Post #2', slug: 'post-2', content: '<p>Post 2</p>', mediaUrl: '', mediaType: 'video', publishedDate: '11/10/2020', author: 'Saachi Roye' },
-  { title: 'Post #1', slug: 'post-1', content: '<p>Post 1</p>', mediaUrl: '', mediaType: 'video', publishedDate: '11/09/2020', author: 'Saachi Roye' }
+  { 
+    title: 'Post #6', 
+    slug: 'post-6', 
+    snippet: '<p>Post 6</p>',
+    content: '<p>Post 6</p>', 
+    mediaUrl: '', 
+    mediaType: 'video', 
+    publishedDate: '11/14/2020', 
+    author: 'Saachi Roye' 
+  },
+  { 
+    title: 'Post #5', 
+    slug: 'post-5', 
+    snippet: '<p>Post 5</p>', 
+    content: '<p>Post 5</p>', 
+    mediaUrl: '', 
+    mediaType: 'video', 
+    publishedDate: '11/13/2020', 
+    author: 'Saachi Roye' 
+  },
+  { 
+    title: 'Post #4', 
+    slug: 'post-4', 
+    snippet: '<p>Post 4</p>', 
+    content: '<p>Post 4</p>', 
+    mediaUrl: '', 
+    mediaType: 'video', 
+    publishedDate: '11/12/2020', 
+    author: 'Saachi Roye' 
+  },
+  { 
+    title: 'Post #3', 
+    slug: 'post-3', 
+    snippet: '<p>Post 3</p>',
+    content: '<p>Post 3</p>', 
+    mediaUrl: '', 
+    mediaType: 'video', 
+    publishedDate: '11/11/2020', 
+    author: 'Saachi Roye' 
+  },
+  { 
+    title: 'Post #2', 
+    slug: 'post-2', 
+    snippet: '<p>Post 2</p>', 
+    content: '<p>Post 2</p>', 
+    mediaUrl: '', 
+    mediaType: 'video', 
+    publishedDate: '11/10/2020', 
+    author: 'Saachi Roye' 
+  },
+  { 
+    title: 'Post #1', 
+    slug: 'post-1', 
+    snippet: '<p>Post 1</p>', 
+    content: '<p>Post 1</p>', 
+    mediaUrl: '', 
+    mediaType: 'video', 
+    publishedDate: '11/09/2020', 
+    author: 'Saachi Roye' 
+  }
 ];
 
 export const JobListings = [
-  { id: '', title: '', slug: '', description: '', location: '', type: '', client: '', position: '', duration: '', created: '', status: '', skills: [], responsibilities: [] }
+  { 
+    id: '1', 
+    title: 'Job #1', 
+    slug: 'job-1', 
+    description: '<p>Job 1</p>', 
+    location: 'Houston, TX', 
+    type: 'Contact', 
+    client: 'Facebook', 
+    position: 'Front End Web Developer', 
+    duration: '6+ months', 
+    created: '11/14/2020', 
+    status: 'open', 
+    skills: [
+      'ReactJS'
+    ], 
+    responsibilities: [
+      'Responsibility 1'
+    ] 
+  },
+  { 
+    id: '2', 
+    title: 'Job #2', 
+    slug: 'job-2', 
+    description: '<p>Job 2</p>', 
+    location: 'Cupertino, CA', 
+    type: 'Contact', 
+    client: 'Apple', 
+    position: 'Front End Web Developer', 
+    duration: '12+ months', 
+    created: '11/13/2020', 
+    status: 'open', 
+    skills: [
+      'HTML',
+      'CSS',
+      'JS'
+    ], 
+    responsibilities: [
+      'Responsibility 1'
+    ] 
+  },
+  { 
+    id: '3', 
+    title: 'Job #3', 
+    slug: 'job-3', 
+    description: '<p>Job 3</p>', 
+    location: 'Seattle, WA', 
+    type: 'Contact', 
+    client: 'Microsoft', 
+    position: '.NET Core Developer', 
+    duration: '24 months', 
+    created: '11/12/2020', 
+    status: 'open', 
+    skills: [
+      'C#',
+      'MS SQL'
+    ], 
+    responsibilities: [
+      'Responsibility 1'
+    ] 
+  }
 ];
