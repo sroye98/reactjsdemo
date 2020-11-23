@@ -26,6 +26,9 @@ function Links() {
       <p className="is-size-7 mb-1">
         <Link to="/contact-us" className="has-text-grey-light">Contact Us</Link>
       </p>
+      <p className="is-size-7 mb-1">
+        <Link to="/login" className="has-text-grey-light">Login</Link>
+      </p>
     </Fragment>
   );
 }

@@ -33,7 +33,6 @@ function BlogIndex(props) {
             </div>
           </div>
         </div>
-        <div className="column is-2"></div>
       </div>
     </div>
   );

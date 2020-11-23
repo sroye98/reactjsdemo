@@ -1,12 +1,25 @@
 import React, { useState, useEffect, useContext, createContext } from "react";
 
+import { fakeAuth } from '../Constants';
+
 const authContext = createContext();
+
+const userObj = {
+  username: 'sroye',
+  roles: [
+    'admin'
+  ]
+};
 
 // Provider component that wraps your app and makes auth object ...
 // ... available to any child component that calls useAuth().
 export function ProvideAuth({ children }) {
   const auth = useProvideAuth();
-  return <authContext.Provider value={auth}>{children}</authContext.Provider>;
+  return ( 
+    <authContext.Provider value={auth}>
+      {children}
+    </authContext.Provider>
+  );
 }
 
 // Hook for child components to get the auth object ...
@@ -19,36 +32,24 @@ export const useAuth = () => {
 function useProvideAuth() {
   const [user, setUser] = useState(null);
 
-  const signin = (email, password) => {
-    const userObj = {
-      username: 'sroye',
-      roles: [
-        'admin'
-      ]
-    };
-
-    setUser(userObj);
-
-    return user;
+  const signin = (identifier, password, cb) => {
+    return fakeAuth.signin(identifier, password, () => {
+      setUser(userObj);
+      cb();
+    });
   };
 
-  const signup = (email, password) => {
-    const userObj = {
-      username: 'sroye',
-      roles: [
-        'admin'
-      ]
-    };
-
-    setUser(userObj);
-
-    return user;
+  const signup = (username, email, password, cb) => {
+    return fakeAuth.signup(username, email, password, () => {
+      setUser(userObj);
+      cb();
+    });
   };
 
-  const signout = () => {
-    setUser(null);
-
-    return;
+  const signout = (cb) => {
+    return fakeAuth.signout(() => {
+      cb();
+    });
   };
 
   const sendPasswordResetEmail = email => {

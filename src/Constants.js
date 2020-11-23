@@ -152,3 +152,47 @@ export const JobListings = [
     ] 
   }
 ];
+
+export const fakeAuth = {
+  isAuthenticated: false,
+  signin(identifier, password, cb) {
+    fakeAuth.isAuthenticated = true;
+    setTimeout(cb, 100); // fake async
+  },
+  signout(cb) {
+    fakeAuth.isAuthenticated = false;
+    setTimeout(cb, 100);
+  },
+  signup(username, email, password, cb) {
+    fakeAuth.isAuthenticated = true;
+    setTimeout(cb, 100);
+  }
+};
+
+export const fakeApi = {
+  getListing(id, cb) {
+    setTimeout(cb => {
+      return JobListings[id];
+    }, 100);
+  },
+  getListings(cb) {
+    setTimeout(cb => {
+      return JobListings;
+    }, 100);
+  },
+  addListing(listing, cb) {
+    setTimeout(cb => {
+      JobListings.push(listing);
+    }, 100);
+  },
+  editListing(id, listing, cb) {
+    setTimeout(cb => {
+      // edit listing
+    }, 100);
+  },
+  deleteListing(id, cb) {
+    setTimeout(cb => {
+      // delete listing
+    }, 100);
+  }
+}
