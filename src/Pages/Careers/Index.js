@@ -1,10 +1,14 @@
+import { useContext } from 'react';
 import { Helmet } from 'react-helmet-async';
 
-import { JobListings } from '../../Constants';
+import { GlobalContext } from '../../Contexts/GlobalState';
+
 import CareerListing from '../../Components/CareerListing';
 
 function CareersIndex() {
-  const renderedCareerListings = JobListings.map((item, index) => {
+  const { listings } = useContext(GlobalContext);
+
+  const renderedCareerListings = listings.map((item, index) => {
     return (
       <CareerListing job={item} key={index} />
     );

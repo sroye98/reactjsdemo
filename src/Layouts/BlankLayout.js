@@ -5,6 +5,7 @@ import {
 } from 'react-router-dom';
 
 import { ProvideAuth } from '../Hooks/Auth';
+import { GlobalProvider } from '../Contexts/GlobalState';
 
 import Login from '../Pages/Auth/Login';
 import SignUp from '../Pages/Auth/SignUp';
@@ -16,21 +17,23 @@ import BlogLayout from './BlogLayout';
 function BlankLayout() {
   return (
     <ProvideAuth>
-      <Router basename={process.env.PUBLIC_URL}>
-        <ScrollToTop />
-        <Switch>
-          <Route path="/admin" component={AdminLayout} />
-          <Route path="/blog" component={BlogLayout} />
-          <Route path="/careers" component={AnonymousLayout} />
-          <Route path="/contact-us" component={AnonymousLayout} />
-          <Route path="/industries-we-serve" component={AnonymousLayout} />
-          <Route path="/login" component={Login} />
-          <Route path="/signup" component={SignUp} />
-          <Route path="/services" component={AnonymousLayout} />
-          <Route path="/who-we-are" component={AnonymousLayout} />
-          <Route exact={true} path="/" component={AnonymousLayout} />
-        </Switch>
-      </Router>
+      <GlobalProvider >
+        <Router basename={process.env.PUBLIC_URL}>
+          <ScrollToTop />
+          <Switch>
+            <Route path="/admin" component={AdminLayout} />
+            <Route path="/blog" component={BlogLayout} />
+            <Route path="/careers" component={AnonymousLayout} />
+            <Route path="/contact-us" component={AnonymousLayout} />
+            <Route path="/industries-we-serve" component={AnonymousLayout} />
+            <Route path="/login" component={Login} />
+            <Route path="/signup" component={SignUp} />
+            <Route path="/services" component={AnonymousLayout} />
+            <Route path="/who-we-are" component={AnonymousLayout} />
+            <Route exact={true} path="/" component={AnonymousLayout} />
+          </Switch>
+        </Router>
+      </GlobalProvider>
     </ProvideAuth>
   );
 }

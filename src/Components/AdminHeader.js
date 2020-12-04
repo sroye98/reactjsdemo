@@ -33,10 +33,16 @@ function AdminHeader() {
               Home
             </NavLink>
             <NavLink activeClassName="is-active" to="/admin/posts" className="navbar-item is-size-7">
-              Posts
+              Blog Posts
+            </NavLink>
+            <NavLink activeClassName="is-active" to="/admin/client-faqs" className="navbar-item is-size-7">
+              Client FAQs
+            </NavLink>
+            <NavLink activeClassName="is-active" to="/admin/consultant-faqs" className="navbar-item is-size-7">
+              Consultant FAQs
             </NavLink>
             <NavLink activeClassName="is-active" to="/admin/jobs" className="navbar-item is-size-7">
-              Jobs
+              Jobs Listings
             </NavLink>
           </div>
         </div>

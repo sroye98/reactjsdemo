@@ -1,7 +1,14 @@
 import { Fragment } from 'react';
-import { Link } from 'react-router-dom';
+import { 
+  Link, 
+  useHistory 
+} from 'react-router-dom';
+import { useAuth } from '../../Hooks/Auth';
 
 function Links() {
+  let auth = useAuth();
+  let history = useHistory();
+
   return (
     <Fragment>
       <p className="is-size-7 is-uppercase has-text-white mb-3">Links</p>
@@ -26,9 +33,22 @@ function Links() {
       <p className="is-size-7 mb-1">
         <Link to="/contact-us" className="has-text-grey-light">Contact Us</Link>
       </p>
-      <p className="is-size-7 mb-1">
-        <Link to="/login" className="has-text-grey-light">Login</Link>
-      </p>
+      { auth.user ? (
+        <>
+          <p className="is-size-7 mb-1">
+            <Link to="/admin" className="has-text-grey-light">Admin</Link>
+          </p>
+          <p className="is-size-7 mb-1">
+            <Link to="/" className="has-text-grey-light" onClick={() => auth.signout(() => {
+              history.replace('/');
+            })}>Logout</Link>
+          </p>
+        </>
+      ) : (
+        <p className="is-size-7 mb-1">
+          <Link to="/login" className="has-text-grey-light">Login</Link>
+        </p>
+      )}
     </Fragment>
   );
 }

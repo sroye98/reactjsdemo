@@ -8,23 +8,23 @@ export const Features = [
 ];
 
 export const ClientFAQs = [
-  { question: '<p>First Question</p>', answer: '<p>First Answer</p>' },
-  { question: '<p>Second Question</p>', answer: '<p>Second Answer</p>' },
-  { question: '<p>Third Question</p>', answer: '<p>Third Answer</p>' },
-  { question: '<p>Fourth Question</p>', answer: '<p>Fourth Answer</p>' },
-  { question: '<p>Fifth Question</p>', answer: '<p>Fifth Answer</p>' },
-  { question: '<p>Sixth Question</p>', answer: '<p>Sixth Answer</p>' },
-  { question: '<p>Seventh Question</p>', answer: '<p>Seventh Answer</p>' }
+  { id: '1', question: '<p>First Question</p>', answer: '<p>First Answer</p>' },
+  { id: '2', question: '<p>Second Question</p>', answer: '<p>Second Answer</p>' },
+  { id: '3', question: '<p>Third Question</p>', answer: '<p>Third Answer</p>' },
+  { id: '4', question: '<p>Fourth Question</p>', answer: '<p>Fourth Answer</p>' },
+  { id: '5', question: '<p>Fifth Question</p>', answer: '<p>Fifth Answer</p>' },
+  { id: '6', question: '<p>Sixth Question</p>', answer: '<p>Sixth Answer</p>' },
+  { id: '7', question: '<p>Seventh Question</p>', answer: '<p>Seventh Answer</p>' }
 ];
 
 export const ConsultantFAQS = [
-  { question: '<p>First Question</p>', answer: '<p>First Answer</p>' },
-  { question: '<p>Second Question</p>', answer: '<p>Second Answer</p>' },
-  { question: '<p>Third Question</p>', answer: '<p>Third Answer</p>' },
-  { question: '<p>Fourth Question</p>', answer: '<p>Fourth Answer</p>' },
-  { question: '<p>Fifth Question</p>', answer: '<p>Fifth Answer</p>' },
-  { question: '<p>Sixth Question</p>', answer: '<p>Sixth Answer</p>' },
-  { question: '<p>Seventh Question</p>', answer: '<p>Seventh Answer</p>' }
+  { id: '1', question: '<p>First Question</p>', answer: '<p>First Answer</p>' },
+  { id: '2', question: '<p>Second Question</p>', answer: '<p>Second Answer</p>' },
+  { id: '3', question: '<p>Third Question</p>', answer: '<p>Third Answer</p>' },
+  { id: '4', question: '<p>Fourth Question</p>', answer: '<p>Fourth Answer</p>' },
+  { id: '5', question: '<p>Fifth Question</p>', answer: '<p>Fifth Answer</p>' },
+  { id: '6', question: '<p>Sixth Question</p>', answer: '<p>Sixth Answer</p>' },
+  { id: '7', question: '<p>Seventh Question</p>', answer: '<p>Seventh Answer</p>' }
 ];
 
 export const BlogPosts = [
@@ -170,29 +170,32 @@ export const fakeAuth = {
 };
 
 export const fakeApi = {
-  getListing(id, cb) {
-    setTimeout(cb => {
+  getListing(id) {
+    setTimeout(() => {
       return JobListings[id];
     }, 100);
   },
-  getListings(cb) {
-    setTimeout(cb => {
+  getListings() {
+    setTimeout(() => {
       return JobListings;
     }, 100);
   },
   addListing(listing, cb) {
-    setTimeout(cb => {
+    setTimeout(() => {
       JobListings.push(listing);
+      cb();
     }, 100);
   },
   editListing(id, listing, cb) {
-    setTimeout(cb => {
-      // edit listing
+    setTimeout(() => {
+      // edit item
+      cb();
     }, 100);
   },
   deleteListing(id, cb) {
-    setTimeout(cb => {
-      // delete listing
+    setTimeout(() => {
+      // delete item
+      cb();
     }, 100);
   }
 }
