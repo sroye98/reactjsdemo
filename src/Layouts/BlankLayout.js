@@ -8,7 +8,6 @@ import { ProvideAuth } from '../Hooks/Auth';
 import { GlobalProvider } from '../Contexts/GlobalState';
 
 import Login from '../Pages/Auth/Login';
-import SignUp from '../Pages/Auth/SignUp';
 import ScrollToTop from '../ScrollToTop';
 import AdminLayout from './AdminLayout';
 import AnonymousLayout from './AnonymousLayout';
@@ -27,7 +26,6 @@ function BlankLayout() {
             <Route path="/contact-us" component={AnonymousLayout} />
             <Route path="/industries-we-serve" component={AnonymousLayout} />
             <Route path="/login" component={Login} />
-            <Route path="/signup" component={SignUp} />
             <Route path="/services" component={AnonymousLayout} />
             <Route path="/who-we-are" component={AnonymousLayout} />
             <Route exact={true} path="/" component={AnonymousLayout} />

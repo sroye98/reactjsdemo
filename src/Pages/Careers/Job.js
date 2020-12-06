@@ -1,9 +1,10 @@
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import parse from 'html-react-parser';
 
-import { JobListings } from '../../Constants';
+import { GlobalContext } from '../../Contexts/GlobalState';
 
 function JobListingSkills(props) {
   return props.skills.map((item, index) => {
@@ -22,8 +23,9 @@ function JobListingResponsibilities(props) {
 }
 
 function Job(props) {
-  const params = useParams();
-  const listing = JobListings.find(m => m.slug === params.slug);
+  let { slug } = useParams();
+  const { listings } = useContext(GlobalContext);
+  const listing = listings.find(m => m.slug === slug);
 
   return (
     <div className="industriesPage">

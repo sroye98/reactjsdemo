@@ -1,14 +1,31 @@
-import { useContext } from 'react';
+import { 
+  useContext, 
+  useEffect, 
+  useState 
+} from 'react';
+import { useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
 import { GlobalContext } from '../../Contexts/GlobalState';
 
 import CareerListing from '../../Components/CareerListing';
+import Pagination from '../../Components/Pagination';
+
+const pageSize = 1;
 
 function CareersIndex() {
+  let { page } = useParams();
   const { listings } = useContext(GlobalContext);
+  const [data, setData] = useState(listings);
 
-  const renderedCareerListings = listings.map((item, index) => {
+  if (!page) page = 1;
+
+  useEffect(() => {
+    const slicedData = listings.slice((page - 1) * pageSize, page * pageSize);
+    setData(slicedData);
+  }, [listings, page]);
+
+  const renderedCareerListings = data.map((item, index) => {
     return (
       <CareerListing job={item} key={index} />
     );
@@ -35,6 +52,10 @@ function CareersIndex() {
       </section>
       <section className="section">
         {renderedCareerListings}
+        <Pagination totalRecords={listings.length}
+                    pageLimit={pageSize}
+                    renderPage={page}
+                    baseUrl='/careers' />
       </section>
     </div>
   );

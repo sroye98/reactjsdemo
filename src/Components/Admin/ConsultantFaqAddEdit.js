@@ -10,36 +10,36 @@ import {
 } from "react-router-dom";
 
 import { GlobalContext } from '../../Contexts/GlobalState';
-import ClientFaq from '../../Models/ClientFaq';
+import ConsultantFaq from '../../Models/ConsultantFaq';
 
-const defaultValues = ClientFaq;
+const defaultValues = ConsultantFaq;
 
-function ClientFaqAddEdit(props) {
+function ConsultantFaqAddEdit(props) {
   let history = useHistory();
-  const { clientFaqs, addClientFaq, editClientFaq } = useContext(GlobalContext);
+  const { consultantFaqs, addConsultantFaq, editConsultantFaq } = useContext(GlobalContext);
   const { register, handleSubmit, reset } = useForm({
     defaultValues
   });
   const [isActive, setIsActive] = useState(props.isActive);
   let { id } = useParams();
-  const currentClientFaqId = id;
-  const isAddMode = !currentClientFaqId;
+  const currentConsultantFaqId = id;
+  const isAddMode = !currentConsultantFaqId;
 
   useEffect(() => {
     if (!isActive) {
-      history.replace('/admin/client-faqs');
+      history.replace('/admin/consultant-faqs');
     }
 
-    const clientFaqId = currentClientFaqId;
-    const selectClientFaq = clientFaqs.find(faq => faq.id === clientFaqId);
-    reset(selectClientFaq);
-  }, [history, isActive, currentClientFaqId, clientFaqs, reset]);
+    const consultantFaqId = currentConsultantFaqId;
+    const selectConsultantFaq = consultantFaqs.find(faq => faq.id === consultantFaqId);
+    reset(selectConsultantFaq);
+  }, [history, isActive, currentConsultantFaqId, consultantFaqs, reset]);
 
   const onSubmit = (faq) => {
     if (isAddMode) {
-      addClientFaq(faq);
+      addConsultantFaq(faq);
     } else {
-      editClientFaq(faq);
+      editConsultantFaq(faq);
     }
     setIsActive(false);
   };
@@ -95,4 +95,4 @@ function ClientFaqAddEdit(props) {
   );
 }
 
-export default ClientFaqAddEdit;
+export default ConsultantFaqAddEdit;

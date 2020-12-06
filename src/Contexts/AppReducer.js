@@ -41,7 +41,7 @@ function AppReducer(state, action) {
         }
         return faq;
       });
-
+      
       return {
         ...state,
         clientFaqs: updatedClientFaqs

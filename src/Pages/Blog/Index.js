@@ -1,12 +1,15 @@
+import { useContext } from 'react';
 import { Helmet } from 'react-helmet-async';
+
+import { GlobalContext } from '../../Contexts/GlobalState';
 
 import BlogTile from '../../Components/BlogTile';
 import BlogSmallTile from '../../Components/BlogSmallTile';
-import { BlogPosts } from '../../Constants';
 
 function BlogIndex(props) {
-  const primaryPost = BlogPosts[0];
-  const remainingPosts = BlogPosts.slice(1);
+  const { posts } = useContext(GlobalContext);
+  const primaryPost = posts[0];
+  const remainingPosts = posts.slice(1);
 
   const renderedPosts = remainingPosts.map((item, index) => {
     return (

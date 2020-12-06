@@ -30,7 +30,7 @@ export const ConsultantFAQS = [
 export const BlogPosts = [
   { 
     title: 'Post #6', 
-    slug: 'post-6', 
+    slug: 'post-six', 
     snippet: '<p>Post 6</p>',
     content: '<p>Post 6</p>', 
     mediaUrl: '', 
@@ -40,7 +40,7 @@ export const BlogPosts = [
   },
   { 
     title: 'Post #5', 
-    slug: 'post-5', 
+    slug: 'post-five', 
     snippet: '<p>Post 5</p>', 
     content: '<p>Post 5</p>', 
     mediaUrl: '', 
@@ -50,7 +50,7 @@ export const BlogPosts = [
   },
   { 
     title: 'Post #4', 
-    slug: 'post-4', 
+    slug: 'post-four', 
     snippet: '<p>Post 4</p>', 
     content: '<p>Post 4</p>', 
     mediaUrl: '', 
@@ -60,7 +60,7 @@ export const BlogPosts = [
   },
   { 
     title: 'Post #3', 
-    slug: 'post-3', 
+    slug: 'post-three', 
     snippet: '<p>Post 3</p>',
     content: '<p>Post 3</p>', 
     mediaUrl: '', 
@@ -70,7 +70,7 @@ export const BlogPosts = [
   },
   { 
     title: 'Post #2', 
-    slug: 'post-2', 
+    slug: 'post-two', 
     snippet: '<p>Post 2</p>', 
     content: '<p>Post 2</p>', 
     mediaUrl: '', 
@@ -80,7 +80,7 @@ export const BlogPosts = [
   },
   { 
     title: 'Post #1', 
-    slug: 'post-1', 
+    slug: 'post-one', 
     snippet: '<p>Post 1</p>', 
     content: '<p>Post 1</p>', 
     mediaUrl: '', 
@@ -94,7 +94,7 @@ export const JobListings = [
   { 
     id: '1', 
     title: 'Job #1', 
-    slug: 'job-1', 
+    slug: 'job-one', 
     description: '<p>Job 1</p>', 
     location: 'Houston, TX', 
     type: 'Contact', 
@@ -113,7 +113,7 @@ export const JobListings = [
   { 
     id: '2', 
     title: 'Job #2', 
-    slug: 'job-2', 
+    slug: 'job-two', 
     description: '<p>Job 2</p>', 
     location: 'Cupertino, CA', 
     type: 'Contact', 
@@ -134,7 +134,7 @@ export const JobListings = [
   { 
     id: '3', 
     title: 'Job #3', 
-    slug: 'job-3', 
+    slug: 'job-three', 
     description: '<p>Job 3</p>', 
     location: 'Seattle, WA', 
     type: 'Contact', 

@@ -1,12 +1,14 @@
+import { useContext } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import parse from 'html-react-parser';
 
-import { BlogPosts } from '../../Constants';
+import { GlobalContext } from '../../Contexts/GlobalState';
 
 function BlogArticle(props) {
-  const params = useParams();
-  const post = BlogPosts.find(m => m.slug === params.slug);
+  const { posts } = useContext(GlobalContext);
+  let { slug } = useParams();
+  const post = posts.find(m => m.slug === slug);
 
   return (
     <>
@@ -24,6 +26,11 @@ function BlogArticle(props) {
       </nav>
     </div>
       <div className="hero">
+        <div className="hero-head">
+          <div className="container has-text-centered">
+            <h1 className="is-size-1">{parse(post.title)}</h1>
+          </div>
+        </div>
         <div className="hero-body">
           <div className="container">
             <div className="columns">
@@ -39,8 +46,7 @@ function BlogArticle(props) {
           <div className="columns">
             <div className="column is-8 is-offset-2">
               <div className="content is-medium">
-                <h1 className="title">{parse(post.title)}</h1>
-                <h2 className="subtitle is-size-7">{parse(post.publishedDate)}</h2>
+                <h2 className="subtitle is-size-7">Published: {parse(post.publishedDate)}</h2>
                 {parse(post.content)}
               </div>
             </div>

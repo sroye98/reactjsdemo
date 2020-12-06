@@ -5,6 +5,7 @@ import AdminHeader from '../Components/AdminHeader';
 import AdminSidebar from '../Components/AdminSidebar';
 import AdminIndex from '../Pages/Admin/Index';
 import AdminClientFaqs from '../Pages/Admin/ClientFaqs';
+import AdminConsultantFaqs from '../Pages/Admin/ConsultantFaqs';
 import AdminJobs from '../Pages/Admin/Jobs';
 import AdminPosts from '../Pages/Admin/Posts';
 
@@ -20,6 +21,9 @@ function AdminLayout(props) {
           <div className="column is-9">
           <ProtectedRoute path="/admin/client-faqs">
             <AdminClientFaqs />
+          </ProtectedRoute>
+          <ProtectedRoute path="/admin/consultant-faqs">
+            <AdminConsultantFaqs />
           </ProtectedRoute>
           <ProtectedRoute path="/admin/posts">
             <AdminPosts />
