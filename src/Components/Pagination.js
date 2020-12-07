@@ -1,8 +1,3 @@
-import { 
-  useState, 
-  //useEffect, 
-  //useCallback 
-} from 'react';
 import { Link } from 'react-router-dom';
 
 const PREVIOUS_PAGE = 'PREV';
@@ -93,7 +88,7 @@ function Pagination(props) {
     const numCurrentPage = parseInt(renderPage);
     return (
       <li key={index}>
-        <Link to={`${baseUrl}/${page}`} 
+        <Link to={`${baseUrl}${page}`} 
               className={`button pagination-link ${numCurrentPage === page ? 'is-current' : ''}`} 
               //onClick={setPage(page)}
         >

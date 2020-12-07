@@ -14,26 +14,21 @@ import IndustriesIndex from '../Pages/Industries/Index';
 import Job from '../Pages/Careers/Job';
 import ServicesIndex from '../Pages/Services/Index';
 import TechnologyBranding from '../Pages/Services/TechnologyBranding';
-import NotFound from '../Pages/NotFound';
 
 function AnonymousLayout(props) {
   return (
     <div>
       <AnonymousHeader />
-      <Route path="/careers/:page(\\d+)" component={CareersIndex} />
-      <Route path="/careers/:slug(\\w+)" component={Job} />
+      <Route path="/careers/:slug" component={Job} />
       <Route exact={true} path="/careers" component={CareersIndex} />
       <Route exact={true} path="/contact-us" component={ContactUs} />
       <Route exact={true} path="/industries-we-serve" component={IndustriesIndex} />
-      <Route path="/services/client-faqs/:page" component={ClientFaqs} />
-      <Route exact={true} path="/services/client-faqs" component={ClientFaqs} />
-      <Route path="/services/consultant-faqs/:page" component={ConsultantFaqs} />
-      <Route exact={true} path="/services/consultant-faqs" component={ConsultantFaqs} />
+      <Route path="/services/client-faqs" component={ClientFaqs} />
+      <Route path="/services/consultant-faqs" component={ConsultantFaqs} />
       <Route path="/services/technolog-branding" component={TechnologyBranding} />
       <Route exact={true} path="/services" component={ServicesIndex} />
       <Route exact={true} path="/who-we-are" component={AboutUsIndex} />
       <Route exact={true} path="/" component={Index} />
-      <Route component={NotFound} />
       <AnonymousFooter />
     </div>
   );

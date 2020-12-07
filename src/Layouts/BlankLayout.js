@@ -1,7 +1,8 @@
 import {
   BrowserRouter as Router,
   Switch,
-  Route
+  Route,
+  Redirect
 } from 'react-router-dom';
 
 import { ProvideAuth } from '../Hooks/Auth';
@@ -12,6 +13,7 @@ import ScrollToTop from '../ScrollToTop';
 import AdminLayout from './AdminLayout';
 import AnonymousLayout from './AnonymousLayout';
 import BlogLayout from './BlogLayout';
+import NotFound from '../Pages/NotFound';
 
 function BlankLayout() {
   return (
@@ -29,6 +31,8 @@ function BlankLayout() {
             <Route path="/services" component={AnonymousLayout} />
             <Route path="/who-we-are" component={AnonymousLayout} />
             <Route exact={true} path="/" component={AnonymousLayout} />
+            <Route path='/notfound' component={NotFound} />
+            <Redirect from='*' to='/notfound' />
           </Switch>
         </Router>
       </GlobalProvider>

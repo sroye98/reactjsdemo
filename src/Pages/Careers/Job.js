@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import parse from 'html-react-parser';
@@ -23,9 +23,14 @@ function JobListingResponsibilities(props) {
 }
 
 function Job(props) {
+  const history = useHistory();
   let { slug } = useParams();
   const { listings } = useContext(GlobalContext);
   const listing = listings.find(m => m.slug === slug);
+
+  const goBack = () => {
+    history.goBack();
+  }
 
   return (
     <div className="industriesPage">
@@ -62,7 +67,7 @@ function Job(props) {
               </ul>
             </div>
             <div className="block">
-              <Link to="/careers" className="button is-rounded is-primary">Back to Careers</Link>
+              <button className="button is-rounded is-primary" onClick={goBack}>Back to Careers</button>
             </div>
           </div>
         </div>

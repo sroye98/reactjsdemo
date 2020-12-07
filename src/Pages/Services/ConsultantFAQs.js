@@ -3,7 +3,7 @@ import {
   useEffect, 
   useState 
 } from 'react';
-import { useParams } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
 import { GlobalContext } from '../../Contexts/GlobalState';
@@ -13,8 +13,14 @@ import Pagination from '../../Components/Pagination';
 
 const pageSize = 3;
 
+const useQuery = () => {
+  return new URLSearchParams(useLocation().search);
+};
+
 function ConsultantFaqs() {
-  let { page } = useParams();
+  let query = useQuery();
+  let page = query.get('page');
+  
   const { consultantFaqs } = useContext(GlobalContext);
   const [data, setData] = useState(consultantFaqs);
 
@@ -49,7 +55,7 @@ function ConsultantFaqs() {
         <Pagination totalRecords={consultantFaqs.length}
                     pageLimit={pageSize}
                     renderPage={page}
-                    baseUrl='/services/consultant-faqs' />
+                    baseUrl='/services/consultant-faqs?page=' />
       </section>
     </div>
   );

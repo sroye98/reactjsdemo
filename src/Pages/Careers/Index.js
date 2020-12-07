@@ -3,7 +3,7 @@ import {
   useEffect, 
   useState 
 } from 'react';
-import { useParams } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
 import { GlobalContext } from '../../Contexts/GlobalState';
@@ -13,8 +13,14 @@ import Pagination from '../../Components/Pagination';
 
 const pageSize = 1;
 
+const useQuery = () => {
+  return new URLSearchParams(useLocation().search);
+};
+
 function CareersIndex() {
-  let { page } = useParams();
+  let query = useQuery();
+  let page = query.get('page');
+  
   const { listings } = useContext(GlobalContext);
   const [data, setData] = useState(listings);
 
@@ -55,7 +61,7 @@ function CareersIndex() {
         <Pagination totalRecords={listings.length}
                     pageLimit={pageSize}
                     renderPage={page}
-                    baseUrl='/careers' />
+                    baseUrl='/careers?page=' />
       </section>
     </div>
   );
