@@ -20,24 +20,26 @@ function BlogIndex(props) {
   });
 
   return (
-    <div className="container">
+    <>
       <Helmet>
         <title>Blog | Creative Team</title>
         <meta name="description" content="Blog | Creative Team" />
         <link rel="canonical" href={`${process.env.PUBLIC_URL}/blog`} />
       </Helmet>
-      <div className="columns">
-        <div className="column is-full">
-          <BlogTile post={primaryPost} />
-          <hr className="has-background-grey-lighter" />
-          <div className="pb-6">
-            <div className="columns is-multiline">
-              {renderedPosts}
+      <div className="container">
+        <div className="columns">
+          <div className="column is-full">
+            <BlogTile post={primaryPost} />
+            <hr className="has-background-grey-lighter" />
+            <div className="pb-6">
+              <div className="columns is-multiline">
+                {renderedPosts}
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

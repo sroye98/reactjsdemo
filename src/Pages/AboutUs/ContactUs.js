@@ -19,7 +19,7 @@ function ContactUs() {
   const onSubmit = (data) => console.log(data);
 
   return (
-    <div className="contactPage">
+    <>
       <Helmet>
         <title>Contact Us | Creative Team</title>
         <meta name="description" content="Contact Us | Creative Team" />
@@ -78,7 +78,7 @@ function ContactUs() {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 }
 

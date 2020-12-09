@@ -32,7 +32,7 @@ function ClientFaqs() {
   }, [clientFaqs, page]);
 
   return (
-    <div className="clientFaqPage">
+    <>
       <Helmet>
         <title>Client FAQs | Creative Team</title>
         <meta name="description" content="Client FAQs | Creative Team" />
@@ -57,7 +57,7 @@ function ClientFaqs() {
                     renderPage={page}
                     baseUrl='/services/client-faqs?page=' />
       </section>
-    </div>
+    </>
   );
 }
 

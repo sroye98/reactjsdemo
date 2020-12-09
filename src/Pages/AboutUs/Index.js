@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet-async';
 
 function AboutUsIndex() {
   return (
-    <div className="industriesPage">
+    <>
       <Helmet>
         <title>Who We Are | Creative Team</title>
         <meta name="description" content="Who We Are | Creative Team" />
@@ -20,7 +20,7 @@ function AboutUsIndex() {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 }
 

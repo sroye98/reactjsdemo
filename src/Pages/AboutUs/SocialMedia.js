@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet-async';
 
 function SocialMedia() {
   return (
-    <div className="industriesPage">
+    <>
       <Helmet>
         <title>Social Media | Creative Team</title>
         <meta name="description" content="Social Media | Creative Team" />
@@ -20,7 +20,7 @@ function SocialMedia() {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 }
 

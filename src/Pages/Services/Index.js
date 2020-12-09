@@ -3,7 +3,7 @@ import TeamCapabilities  from '../../Components/TeamCapabilities';
 
 function ServicesIndex() {
   return (
-    <div className="searchPage">
+    <>
       <Helmet>
         <title>Services | Creative Team</title>
         <meta name="description" content="Services | Creative Team" />
@@ -22,7 +22,7 @@ function ServicesIndex() {
         </div>
       </section>
       <TeamCapabilities />
-    </div>
+    </>
   );
 }
 

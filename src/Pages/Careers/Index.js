@@ -38,7 +38,7 @@ function CareersIndex() {
   });
 
   return (
-    <div className="industriesPage">
+    <>
       <Helmet>
         <title>Careers | Creative Team</title>
         <meta name="description" content="Careers | Creative Team" />
@@ -63,7 +63,7 @@ function CareersIndex() {
                     renderPage={page}
                     baseUrl='/careers?page=' />
       </section>
-    </div>
+    </>
   );
 }
 

@@ -1,30 +1,110 @@
 export const Features = [
-  { icon: 'fas fa-laptop fa-2x', title: 'Corporate Branding', subtitle: 'Strong, distinct brand identities' },
-  { icon: 'fas fa-layer-group fa-2x', title: 'UI/UX Design', subtitle: 'Powerful, intuitive & user-friendly designs for web and mobile interfaces' },
-  { icon: 'fas fa-code fa-2x', title: 'Application Development', subtitle: 'Using the latest technology, Creative Team members can produce high-quality, responsive app experiences for your enterprise' },
-  { icon: 'fas fa-database fa-2x', title: 'Cloud Computing', subtitle: 'Well versed in IAAS utilizing all major cloud services providers like Amazon AWS, MS Azure and Google Cloud' },
-  { icon: 'fas fa-search fa-2x', title: 'Advanced Analytics & Data Science', subtitle: 'Our team of creatives can help you deploy solutions in the areas of AI, Machine Learning and Predictive Analysis' },
-  { icon: 'fas fa-mobile-alt fa-2x', title: 'Mobile App Dev', subtitle: 'With powerful tools Creative Team members create engaging mobile apps to grow your business\' reach' }
+  { 
+    icon: 'fas fa-laptop fa-2x', 
+    title: 'Corporate Branding', 
+    subtitle: 'Strong, distinct brand identities' 
+  },
+  { 
+    icon: 'fas fa-layer-group fa-2x', 
+    title: 'UI/UX Design', 
+    subtitle: 'Powerful, intuitive & user-friendly designs for web and mobile interfaces' 
+  },
+  { 
+    icon: 'fas fa-code fa-2x', 
+    title: 'Application Development', 
+    subtitle: 'Using the latest technology, Creative Team members can produce high-quality, responsive app experiences for your enterprise' 
+  },
+  { 
+    icon: 'fas fa-database fa-2x', 
+    title: 'Cloud Computing', 
+    subtitle: 'Well versed in IAAS utilizing all major cloud services providers like Amazon AWS, MS Azure and Google Cloud' 
+  },
+  { 
+    icon: 'fas fa-search fa-2x', 
+    title: 'Advanced Analytics & Data Science', 
+    subtitle: 'Our team of creatives can help you deploy solutions in the areas of AI, Machine Learning and Predictive Analysis' 
+  },
+  { 
+    icon: 'fas fa-mobile-alt fa-2x', 
+    title: 'Mobile App Dev', 
+    subtitle: 'With powerful tools Creative Team members create engaging mobile apps to grow your business\' reach' 
+  }
 ];
 
 export const ClientFAQs = [
-  { id: '1', question: '<p>First Question</p>', answer: '<p>First Answer</p>' },
-  { id: '2', question: '<p>Second Question</p>', answer: '<p>Second Answer</p>' },
-  { id: '3', question: '<p>Third Question</p>', answer: '<p>Third Answer</p>' },
-  { id: '4', question: '<p>Fourth Question</p>', answer: '<p>Fourth Answer</p>' },
-  { id: '5', question: '<p>Fifth Question</p>', answer: '<p>Fifth Answer</p>' },
-  { id: '6', question: '<p>Sixth Question</p>', answer: '<p>Sixth Answer</p>' },
-  { id: '7', question: '<p>Seventh Question</p>', answer: '<p>Seventh Answer</p>' }
+  { 
+    id: '1', 
+    question: '<p>First Question</p>', 
+    answer: '<p>First Answer</p>' 
+  },
+  { 
+    id: '2', 
+    question: '<p>Second Question</p>', 
+    answer: '<p>Second Answer</p>' 
+  },
+  { 
+    id: '3', 
+    question: '<p>Third Question</p>', 
+    answer: '<p>Third Answer</p>' 
+  },
+  { 
+    id: '4', 
+    question: '<p>Fourth Question</p>', 
+    answer: '<p>Fourth Answer</p>' 
+  },
+  { 
+    id: '5', 
+    question: '<p>Fifth Question</p>', 
+    answer: '<p>Fifth Answer</p>' 
+  },
+  { 
+    id: '6', 
+    question: '<p>Sixth Question</p>', 
+    answer: '<p>Sixth Answer</p>' 
+  },
+  { 
+    id: '7', 
+    question: '<p>Seventh Question</p>', 
+    answer: '<p>Seventh Answer</p>' 
+  }
 ];
 
 export const ConsultantFAQS = [
-  { id: '1', question: '<p>First Question</p>', answer: '<p>First Answer</p>' },
-  { id: '2', question: '<p>Second Question</p>', answer: '<p>Second Answer</p>' },
-  { id: '3', question: '<p>Third Question</p>', answer: '<p>Third Answer</p>' },
-  { id: '4', question: '<p>Fourth Question</p>', answer: '<p>Fourth Answer</p>' },
-  { id: '5', question: '<p>Fifth Question</p>', answer: '<p>Fifth Answer</p>' },
-  { id: '6', question: '<p>Sixth Question</p>', answer: '<p>Sixth Answer</p>' },
-  { id: '7', question: '<p>Seventh Question</p>', answer: '<p>Seventh Answer</p>' }
+  { 
+    id: '1', 
+    question: '<p>First Question</p>', 
+    answer: '<p>First Answer</p>' 
+  },
+  { 
+    id: '2', 
+    question: '<p>Second Question</p>', 
+    answer: '<p>Second Answer</p>' 
+  },
+  { 
+    id: '3', 
+    question: '<p>Third Question</p>', 
+    answer: '<p>Third Answer</p>' 
+  },
+  { 
+    id: '4', 
+    question: '<p>Fourth Question</p>', 
+    answer: '<p>Fourth Answer</p>' 
+  },
+  { 
+    id: '5', 
+    question: '<p>Fifth Question</p>', 
+    answer: '<p>Fifth Answer</p>' 
+  },
+  { 
+    id: '6', 
+    question: '<p>Sixth Question</p>', 
+    answer: '<p>Sixth Answer</p>' 
+  },
+  { 
+    id: '7', 
+    question: '<p>Seventh Question</p>', 
+    answer: '<p>Seventh Answer</p>' 
+  }
 ];
 
 export const BlogPosts = [
@@ -169,33 +249,24 @@ export const fakeAuth = {
   }
 };
 
-export const fakeApi = {
-  getListing(id) {
-    setTimeout(() => {
-      return JobListings[id];
-    }, 100);
+export const pageVariants = {
+  initial: {
+    opacity: 0
   },
-  getListings() {
-    setTimeout(() => {
-      return JobListings;
-    }, 100);
+  in: {
+    opacity: 1
   },
-  addListing(listing, cb) {
-    setTimeout(() => {
-      JobListings.push(listing);
-      cb();
-    }, 100);
-  },
-  editListing(id, listing, cb) {
-    setTimeout(() => {
-      // edit item
-      cb();
-    }, 100);
-  },
-  deleteListing(id, cb) {
-    setTimeout(() => {
-      // delete item
-      cb();
-    }, 100);
+  out: {
+    opacity: 0
   }
-}
+};
+
+export const pageTransition = {
+  type: "spring",
+  ease: "linear",
+  duration: 1.5
+};
+
+export const pageStyle = {
+  position: "absolute"
+};

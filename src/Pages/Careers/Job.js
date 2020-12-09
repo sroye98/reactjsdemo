@@ -33,7 +33,7 @@ function Job(props) {
   }
 
   return (
-    <div className="industriesPage">
+    <>
       <Helmet>
         <title>{listing.title} | Careers | Creative Team</title>
         <meta name="description" content={`${listing.title} | Careers | Creative Team`} />
@@ -72,7 +72,7 @@ function Job(props) {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 }
 

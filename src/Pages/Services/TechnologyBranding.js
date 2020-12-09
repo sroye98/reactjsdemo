@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet-async';
 
 function TechnologyBranding() {
   return (
-    <div className="clientFaqPage">
+    <>
       <Helmet>
         <title>Technology/Branding | Creative Team</title>
         <meta name="description" content="Technology/Branding | Creative Team" />
@@ -20,7 +20,7 @@ function TechnologyBranding() {
           </div>
         </div>
       </section>
-    </div>
+    </>
   )
 }
 

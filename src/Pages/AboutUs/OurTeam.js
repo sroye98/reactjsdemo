@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet-async';
 
 function OurTeam() {
   return (
-    <div className="industriesPage">
+    <>
       <Helmet>
         <title>Our Team | Who We Are | Creative Team</title>
         <meta name="description" content="Our Team | Who We Are | Creative Team" />
@@ -20,7 +20,7 @@ function OurTeam() {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 }
 

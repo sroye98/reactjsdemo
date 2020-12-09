@@ -15,9 +15,10 @@ import Job from '../Pages/Careers/Job';
 import ServicesIndex from '../Pages/Services/Index';
 import TechnologyBranding from '../Pages/Services/TechnologyBranding';
 
+
 function AnonymousLayout(props) {
   return (
-    <div>
+    <>
       <AnonymousHeader />
       <Route path="/careers/:slug" component={Job} />
       <Route exact={true} path="/careers" component={CareersIndex} />
@@ -30,7 +31,7 @@ function AnonymousLayout(props) {
       <Route exact={true} path="/who-we-are" component={AboutUsIndex} />
       <Route exact={true} path="/" component={Index} />
       <AnonymousFooter />
-    </div>
+    </>
   );
 }
 
