@@ -1,27 +1,27 @@
 {
   "files": {
     "main.css": "/reactjsdemo/static/css/main.e1a806b1.chunk.css",
-    "main.js": "/reactjsdemo/static/js/main.3f705654.chunk.js",
-    "main.js.map": "/reactjsdemo/static/js/main.3f705654.chunk.js.map",
-    "runtime-main.js": "/reactjsdemo/static/js/runtime-main.f3548706.js",
-    "runtime-main.js.map": "/reactjsdemo/static/js/runtime-main.f3548706.js.map",
+    "main.js": "/reactjsdemo/static/js/main.f48ededb.chunk.js",
+    "main.js.map": "/reactjsdemo/static/js/main.f48ededb.chunk.js.map",
+    "runtime-main.js": "/reactjsdemo/static/js/runtime-main.21fa8c4e.js",
+    "runtime-main.js.map": "/reactjsdemo/static/js/runtime-main.21fa8c4e.js.map",
     "static/css/2.93d4b2ea.chunk.css": "/reactjsdemo/static/css/2.93d4b2ea.chunk.css",
-    "static/js/2.6236def6.chunk.js": "/reactjsdemo/static/js/2.6236def6.chunk.js",
-    "static/js/2.6236def6.chunk.js.map": "/reactjsdemo/static/js/2.6236def6.chunk.js.map",
-    "static/js/3.de78be46.chunk.js": "/reactjsdemo/static/js/3.de78be46.chunk.js",
-    "static/js/3.de78be46.chunk.js.map": "/reactjsdemo/static/js/3.de78be46.chunk.js.map",
+    "static/js/2.ec146f25.chunk.js": "/reactjsdemo/static/js/2.ec146f25.chunk.js",
+    "static/js/2.ec146f25.chunk.js.map": "/reactjsdemo/static/js/2.ec146f25.chunk.js.map",
+    "static/js/3.d4bf84c6.chunk.js": "/reactjsdemo/static/js/3.d4bf84c6.chunk.js",
+    "static/js/3.d4bf84c6.chunk.js.map": "/reactjsdemo/static/js/3.d4bf84c6.chunk.js.map",
     "index.html": "/reactjsdemo/index.html",
     "static/css/2.93d4b2ea.chunk.css.map": "/reactjsdemo/static/css/2.93d4b2ea.chunk.css.map",
     "static/css/main.e1a806b1.chunk.css.map": "/reactjsdemo/static/css/main.e1a806b1.chunk.css.map",
-    "static/js/2.6236def6.chunk.js.LICENSE.txt": "/reactjsdemo/static/js/2.6236def6.chunk.js.LICENSE.txt",
+    "static/js/2.ec146f25.chunk.js.LICENSE.txt": "/reactjsdemo/static/js/2.ec146f25.chunk.js.LICENSE.txt",
     "static/media/all.min.css": "/reactjsdemo/static/media/fa-solid-900.46fdbd2d.woff",
     "static/media/logo3.475bf793.png": "/reactjsdemo/static/media/logo3.475bf793.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.f3548706.js",
+    "static/js/runtime-main.21fa8c4e.js",
     "static/css/2.93d4b2ea.chunk.css",
-    "static/js/2.6236def6.chunk.js",
+    "static/js/2.ec146f25.chunk.js",
     "static/css/main.e1a806b1.chunk.css",
-    "static/js/main.3f705654.chunk.js"
+    "static/js/main.f48ededb.chunk.js"
   ]
 }
