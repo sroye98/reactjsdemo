@@ -1,10 +1,38 @@
+import { 
+  useContext, 
+  useEffect, 
+  useState 
+} from 'react';
+import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { ClientFAQs } from '../../Constants';
+
+import { GlobalContext } from '../../Contexts/GlobalState';
+
 import RenderFAQs from '../../Components/RenderFAQs';
+import Pagination from '../../Components/Pagination';
+
+const pageSize = 3;
+
+const useQuery = () => {
+  return new URLSearchParams(useLocation().search);
+};
 
 function ConsultantFaqs() {
+  let query = useQuery();
+  let page = query.get('page');
+  
+  const { consultantFaqs } = useContext(GlobalContext);
+  const [data, setData] = useState(consultantFaqs);
+
+  if (!page) page = 1;
+
+  useEffect(() => {
+    const slicedData = consultantFaqs.slice((page - 1) * pageSize, page * pageSize);
+    setData(slicedData);
+  }, [consultantFaqs, page]);
+
   return (
-    <div className="clientFaqPage">
+    <>
       <Helmet>
         <title>Consultant FAQs | Creative Team</title>
         <meta name="description" content="Consultant FAQs | Creative Team" />
@@ -23,9 +51,13 @@ function ConsultantFaqs() {
         </div>
       </section>
       <section className="section">
-        <RenderFAQs items={ClientFAQs} />
+        <RenderFAQs items={data} />
+        <Pagination totalRecords={consultantFaqs.length}
+                    pageLimit={pageSize}
+                    renderPage={page}
+                    baseUrl='/services/consultant-faqs?page=' />
       </section>
-    </div>
+    </>
   );
 }
 

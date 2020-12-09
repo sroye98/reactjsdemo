@@ -1,9 +1,10 @@
 import { Helmet } from "react-helmet-async";
+
 import TeamCapabilities  from "../Components/TeamCapabilities";
 
 function Index() {
   return (
-    <div>
+    <>
       <Helmet>
         <title>We're Creative Team</title>
         <meta name="description" content="We're Creative Team | Creative Team" />
@@ -34,7 +35,7 @@ function Index() {
           </div>
       </section>
       <TeamCapabilities />
-    </div>
+    </>
   );
 }
 

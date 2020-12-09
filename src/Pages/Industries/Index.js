@@ -2,11 +2,11 @@ import { Helmet } from 'react-helmet-async';
 
 function IndustriesIndex() {
   return (
-    <div className="industriesPage">
+    <>
       <Helmet>
         <title>Industries We Serve | Creative Team</title>
         <meta name="description" content="Industries We Serve | Creative Team" />
-        <link rel="canonical" href={`${process.env.PUBLIC_URL}/services`} />
+        <link rel="canonical" href={`${process.env.PUBLIC_URL}/industries-we-serve`} />
       </Helmet>
       <section className="hero is-fullheight" style={{borderTop: '1px solid hsl(0, 0%, 86%)'}}>
         <div className="hero-body">
@@ -20,7 +20,7 @@ function IndustriesIndex() {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 }
 

@@ -6,9 +6,7 @@ function App() {
   
   return (
     <HelmetProvider context={helmetContext}>
-      <div>
-        <BlankLayout />
-      </div>
+      <BlankLayout />
     </HelmetProvider>
   );
 }
